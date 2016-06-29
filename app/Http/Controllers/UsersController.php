@@ -29,9 +29,6 @@ class UserController extends CodesController
 		$user->country_tag = $req->country;
 		$user->code_id = $code->id;
 		
-		Mail::send('emails.test', ['name' => 'Easy'], function ($message)
-		{
-			$message->to('tiropolska@gmail.com', 'Some guy')->subject('Welcome!');
-		});
+		return $user;
     }
 }

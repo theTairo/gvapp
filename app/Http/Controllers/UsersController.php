@@ -25,6 +25,6 @@ class UserController extends CodesController
 		$user->country_tag = $req->country;
 		$user->code_id = $code->id;
 		
-		return $user;
+		$user->save();
     }
 }

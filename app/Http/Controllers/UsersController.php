@@ -19,10 +19,6 @@ class UserController extends CodesController
 		$user = new User;
 		$code = $this->getCode();
 
-		$this->validate($req, [
-			'first_name' => 'required'
-		]);
-
 		$user->first_name = $req->first_name;
 		$user->last_name = $req->last_name;
 		$user->email = $req->email;
